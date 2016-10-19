@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> How well do you know Mindy Lahiri? | Taylor Ritchie </title>
+<link href="custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="main">
+
+<center><h1>How well do you know Mindy Lahiri?</h1>
+<img class="img-responsive" src="mindy.jpg" width="400"> 
+
+</center>
+<form id="mindyform" action=" ">
+
+<p><strong> Does Mindy enjoy celebrity gossip?</strong> </p>
+<p>
+<input type="radio" name="gossip" value="0" /> No<br>
+<input type="radio" name="gossip" value="10" /> Yes
+</p>
+
+<p><strong> What city does Mindy live in?</strong> </p>
+<p>
+<input type="radio" name="city" value="10" /> New York City<br>
+<input type="radio" name="city" value="0" /> San Francisco<br>
+<input type="radio" name="city" value="0" /> Austin<br>
+<input type="radio" name="city" value="0" /> Miami
+</p>
+
+<p><strong> What is Mindy's profession?</strong> </p>
+<p>
+<input type="radio" name="job" value="0" /> Plastic Surgeon<br>
+<input type="radio" name="job" value="0" /> High School Latin Teacher<br>
+<input type="radio" name="job" value="10" /> OBGYN<br>
+<input type="radio" name="job" value="0" /> Lawyer
+</p>
+
+<p><strong> How often a week does Mindy eat bear claws? </strong> </p>
+<p>
+
+<input type="radio" name="bearclaws" value="0" /> 2 to 4<br>
+<input type="radio" name="bearclaws" value="0" /> 5 to 6<br>
+<input type="radio" name="bearclaws" value="0" /> 7 to 8<br>
+<input type="radio" name="bearclaws" value="10" /> 9 to 10
+</p>
+
+<p><strong> What is Mindy's warrior name? </strong> </p>
+<p>
+
+<input type="radio" name="warriorname" value="0" /> Katy Perry Kung Pow <br>
+<input type="radio" name="warriorname" value="10" /> Beyonce Pad Thai<br>
+<input type="radio" name="warriorname" value="0" /> Taylor Swift King's Curry<br>
+<input type="radio" name="warriorname" value="0" /> Lady Gaga Chow Mein
+</p>
+
+<p><strong> Who is Mindy's BFF? </strong> </p>
+<p>
+
+<input type="radio" name="bff" value="0" /> Morgan <br>
+<input type="radio" name="bff" value="0" /> Tamra<br>
+<input type="radio" name="bff" value="10" /> Peter<br>
+<input type="radio" name="bff" value="0" /> Beverly
+</p>
+
+<p><strong> What is Mindy's sons name? </strong> </p>
+<p>
+
+<input type="radio" name="son" value="10" /> Leo <br>
+<input type="radio" name="son" value="0" /> Rocky<br>
+<input type="radio" name="son" value="0" /> Benjamin<br>
+<input type="radio" name="son" value="0" /> Dwight
+</p>
+
+<p><strong> Who is Mindy's baby daddy? </strong> </p>
+<p>
+
+<input type="radio" name="babydaddy" value="0" /> Morgan <br>
+<input type="radio" name="babydaddy" value="0" /> Ryan<br>
+<input type="radio" name="babydaddy" value="0" /> Jermey<br>
+<input type="radio" name="babydaddy" value="10" /> Danny
+</p>
+
+<p><strong> What is Mindy's favorite fast food restaurant?</strong> </p>
+<p>
+<input type="radio" name="food" value="0" /> In and Out Burger<br>
+<input type="radio" name="food" value="0" /> Burger King<br>
+<input type="radio" name="food" value="10" /> McDonalds<br>
+<input type="radio" name="food" value="0" /> Chick-Fil-A
+</p>
+
+<p><strong> What is Mindy's favorite movie genre?</strong> </p>
+<p>
+<input type="radio" name="movies" value="0" /> Science Fiction<br>
+<input type="radio" name="movies" value="10" /> Romantic Comedies<br>
+<input type="radio" name="movies" value="0" /> Horror<br>
+<input type="radio" name="movies" value="0" /> Action
+</p>
+
+<input type="submit" value="View Results">
+</form>
+
+<p>You got <span id="answer"> __ </span> out of 100</p>
+<p id="answer2"></p>
+
+<script>
+document.getElementById("mindyform").onsubmit=function() {
+       gossip = parseInt(document.querySelector('input[name = "gossip"]:checked').value);
+	   city = parseInt(document.querySelector('input[name = "city"]:checked').value);
+	   job = parseInt(document.querySelector('input[name = "job"]:checked').value);
+	   bearclaws = parseInt(document.querySelector('input[name = "bearclaws"]:checked').value);
+	   warriorname = parseInt(document.querySelector('input[name = "warriorname"]:checked').value);
+       bff = parseInt(document.querySelector('input[name = "bff"]:checked').value);
+	   son = parseInt(document.querySelector('input[name = "son"]:checked').value);
+	   babydaddy = parseInt(document.querySelector('input[name = "babydaddy"]:checked').value);
+	   food = parseInt(document.querySelector('input[name = "food"]:checked').value);
+	   movies = parseInt(document.querySelector('input[name = "movies"]:checked').value);
+	   
+result = gossip + city + job + bearclaws + warriorname + bff + son + babydaddy + food + movies;
+	   
+	   document.getElementById("answer").innerHTML = result;
+	   
+	if (result == 0) {result2 = "Have you ever seen The Mindy Project?<br />			 <img src='howdareyou.gif' width='300' />"};
+	if (result == 10) {result2 = "Yikes! Try again.<br />								 <img src='depressed.gif' width='300' />"};
+	if (result == 20) {result2 = "Mindy would be disappointed. Try again.<br />			 <img src='sad.jpg' width='300' />"};
+	if (result == 30) {result2 = "This quiz is a mess, but at least it's a hot mess!!<br /><img src='hotmess.jpg' width='300' />"};
+	if (result == 40) {result2 = "Come on, you got this! Try again.<br />				 <img src='kidding.gif' width='300' />"};
+	if (result == 50) {result2 = "I think it's time to rewatch The Mindy Project.<br /><img src='everyone.gif' width='300' />"};
+	if (result == 60) {result2 = "So close yet so far.<br />							 <img src='instagram.gif' width='300' />"};
+	if (result == 70) {result2 = "Don't give up!! You got this!!<br />					 <img src='ok.gif' width='300' />"};
+	if (result == 80) {result2 = "You're a warrior! Just a couple more!! <br />			 <img src='beyonce.gif' width='300' />"};
+	if (result == 90) {result2 = "Keep it up, you're almost there!<br />				 <img src='inspirational.gif' width='300' />"};
+	if (result == 100) {result2 = "YES!!! You're a Mindy Project expert!! <br />		 <img src='dance.gif' width='300' />"};
+	   document.getElementById("answer2").innerHTML = result2;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>	   
+</body>
+</html>

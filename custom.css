@@ -1,0 +1,46 @@
+body {
+  padding-top: 20px;
+    font-family: "Optima","Helvetica Neue","Abril Fatface",cursive,Helvetica,Arial,sans-serif;
+   	background: url("ny.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+
+img {
+  vertical-align: middle;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+#main {
+width: 60%;
+max-width: 950px;
+border: 1px #fff;
+margin: auto;
+padding: 30px;
+background-color: #fff;
+border-radius: 10px;
+}
